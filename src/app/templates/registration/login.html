@@ -7,17 +7,18 @@
     <div class="column is-4 is-offset-4">
       <div class="box has-text-left">
         {% if form.errors %}
-        <p style="padding-bottom:20px">Nom d'utilisateur ou mot de passe inconnu. Veuillez recommencer.</p>
+        <p style="padding-bottom:20px">அறியப்படாத பயனர்பெயர் அல்லது கடவுச்சொல்.</p>
         {% endif %} {% if next %} {% if user.is_authenticated %}
-        <p style="padding-bottom:20px">Vous n'avez pas accès à cette page. Veuillez vous connecter pour y accéder.</p>
+        <p style="padding-bottom:20px">இந்தப் பக்கத்திற்கு உங்களுக்கு அணுகல் இல்லை. அதை அணுக தயவுசெய்து உள்நுழைக.</p>
         {% else %}
-        <p style="padding-bottom:20px">Veuillez vous connecter</p>
+        <p style="padding-bottom:20px">தயவுசெய்து உள்நுழைக
+        </p>
         {% endif %} {% endif %}
 
         <form method="post" action="{% url 'login' %}">
           {% csrf_token %}
           <div class="field ">
-            <label class="label">Nom d'utilisateur</label>
+            <label class="label">பயனர்பெயர்</label>
             <div class="control has-icons-left has-icons-right">
               {{ form.username|add_class:"input" }}
               <span class="icon is-small is-left">
@@ -30,7 +31,7 @@
           </div>
 
           <div class="field">
-            <label class="label">Mot de passe</label>
+            <label class="label">கடவுச்சொல்</label>
             <div class="control has-icons-left has-icons-right">
               {{ form.password|add_class:"input"}}
               <span class="icon is-small is-left">
@@ -50,7 +51,7 @@
           {% if allow_signup %}
           <div class="field">
             <span class="checkbox" style="margin-top:10px">
-              Pas de compte ? <a href="{% url 'signup' %}"> Inscription </a>
+              கணக்கு இல்லையா? <a href="{% url 'signup' %}"> Inscription </a>
             </span>
           </div>
           {% endif %}

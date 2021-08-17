@@ -13,7 +13,8 @@
     <br>
     {% endif %}
     {% if form.errors %}
-    <p style="color: red">Le nom d'utilisateur et le mot de passe ne sont pas valides. Veuillez recommencer</p>
+    <p style="color: red">பயனர்பெயர் மற்றும் கடவுச்சொல் செல்லுபடியாகாது. 
+      தயவுசெய்து மீண்டும் தொடங்குங்கள்.</p>
     {% endif %}
 
     {% csrf_token %}
@@ -34,15 +35,16 @@
     <div style="text-align:center">
       <button type="submit" class=" relative inline-flex uppercase btn--white text-red rounded -ml-4 lg:-ml-6 border border-red px-4 lg:px-6 py-2">
         <span class="btn-overlay--red"></span>
-        <span class="relative">Se connecter</span>
+        <span class="relative">உள்நுழைய</span>
       </button>
     </div>
     <div class="field">
       <span class="checkbox" style="margin-top:30px">
-        Pas de compte ? <a href="{% url 'signup' %}"> S'inscrire </a>
+        கணக்கு இல்லையா? <a href="{% url 'signup' %}"> இப்போது பதிவு செய்யவும்
+        </a>
       </span>
       <span class="checkbox" style="margin-top:30px">
-        Mot de passe oublié ? <a href="{% url 'password_reset' %}"> Réinitialiser </a>
+        உங்கள் கடவுச்சொல்லை மறந்து விட்டீர்களா ? <a href="{% url 'password_reset' %}"> மீட்டமை </a>
       </span>
     </div>
   </form>

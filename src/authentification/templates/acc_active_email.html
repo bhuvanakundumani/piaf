@@ -1,5 +1,4 @@
 {% autoescape off %}
 Bonjour {{ user.username }},
-Pour valider votre email, veuillez cliquer sur ce lien,
-https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+உங்கள் மின்னஞ்சலை சரிபார்க்க, இந்த இணைப்பை கிளிக் செய்யவும்,https://{{ domain }}{% url 'activate' uidb64=uid token=token %}
 {% endautoescape %}

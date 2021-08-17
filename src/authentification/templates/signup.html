@@ -4,7 +4,7 @@
 {% block content_auth %}
 {% if allow_signup %}
 <div class="card-header is-shadowless">
-  <p>Il est nécessaire de vous inscrire pour pouvoir contribuer au projet. Ceci permet de garantir l'honnêteté et la qualité des annotations saisies. Nous ne ferons rien de votre email (<a href="https://etalab.github.io/piaf-site/cgu.html">voir les CGU</a>).
+  <p>திட்டத்திற்கு பங்களிக்க பதிவு செய்ய வேண்டியது அவசியம். இது உள்ளிடப்பட்ட குறிப்புகளின் நேர்மையையும் தரத்தையும் உறுதி செய்கிறது.உங்கள் மின்னஞ்சலில் நாங்கள் எதையும் செய்ய மாட்டோம் T & C களைப் பார்க்கவும்(<a href="https://etalab.github.io/piaf-site/cgu.html"></a>).
   </p>
 </div>
 <div class="card-content">
@@ -32,12 +32,12 @@
       <button type="submit"
         class=" relative inline-flex uppercase btn--white text-red rounded -ml-4 lg:-ml-6 border border-red px-4 lg:px-6 py-2">
         <span class="btn-overlay--red"></span>
-        <span class="relative">Inscription</span>
+        <span class="relative">பதிவு</span>
       </button>
     </div>
     <div class="field">
       <span class="checkbox" style="margin-top:30px">
-        Déjà un compte ? <a href="{% url 'login' %}"> Se connecter </a>
+        ஏற்கனவே ஒரு கணக்கு ? <a href="{% url 'login' %}"> உள்நுழைய </a>
       </span>
     </div>
   </form>
@@ -46,7 +46,7 @@
 {% else %}
 <div class="card-content">
   <div>
-    Vous ne pouvez pas vous enregistrer vous-même. Il faudra contacter un membre de Piaf pour avoir votre nom d'utilisateur et votre mot de passe ! piaf@data.gouv.fr
+    நீங்களே பதிவு செய்ய முடியாது.உங்கள் பயனர்பெயர் மற்றும் கடவுச்சொல்லைப் பெற நீங்கள் ஒரு பியாஃப் உறுப்பினரைத் தொடர்பு கொள்ள வேண்டும்!piaf@data.gouv.fr
   </div>
 </div>
 {% endif %}
