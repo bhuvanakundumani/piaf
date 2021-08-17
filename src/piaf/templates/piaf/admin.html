@@ -4,25 +4,26 @@
 <div class="column is-12">
   <section class="card">
     <header class="card-header">
-      <h1 class="card-header-title">Charger des contenus depuis un fichier JSON</h1>
+      <h1 class="card-header-title">JSON கோப்பிலிருந்து உள்ளடக்கத்தை ஏற்றவும்      </h1>
     </header>
     <div class="card-content">
       {% if count_inserted_articles %}
-        <p class=notification>{{ count_inserted_articles }} articles on été ajoutés.</p>
+        <p class=notification>{{ count_inserted_articles }}கட்டுரைகள் சேர்க்கப்பட்டுள்ளன.</p>
       {% endif %}
       <form action="{% url 'app:dataset' %}" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div>
-          <label>Fichier JSON des articles</label>
+          <label>கட்டுரைகளின் JSON கோப்பு</label>
           <input type=file name=file>
         </div>
 
         <div>
-          <label>Restriction des utilisateurs</label>
+          <label>பயனர் கட்டுப்பாடு          </label>
           <select name=audience required>
             <option> --- </option>
-            <option value=restricted>Réservé uniquement aux utilisateurs certifiés</option>
-            <option value=all>Valide pour tous les utilisateurs (non certifiés)</option>
+            <option value=restricted>சான்றளிக்கப்பட்ட பயனர்களுக்கு மட்டுமே ஒதுக்கப்பட்டுள்ளது</option>
+            <option value=all>அனைத்து பயனர்களுக்கும் செல்லுபடியாகும் (சான்றிதழ் இல்லை)
+            </option>
           </select>
         </div>
         <input type="submit" class="button is-link" value="Ajouter ces articles">
@@ -34,10 +35,10 @@
 
   <section class="card">
     <header class="card-header">
-      <h1 class="card-header-title">Télécharger les données en JSON</h1>
+      <h1 class="card-header-title">JSON இல் தரவைப் பதிவிறக்கவும்</h1>
     </header>
     <div class="card-content">
-      <a class="button is-link" href="/app/admin/dataset">Télécharger</a>
+      <a class="button is-link" href="/app/admin/dataset">பதிவிறக்க      </a>
     </div>
   </section>
 </div>
